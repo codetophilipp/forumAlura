@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.restapi.forumalura.model.Curso;
 import com.restapi.forumalura.model.Topico;
@@ -12,7 +13,8 @@ import com.restapi.forumalura.model.Topico;
 @Controller
 public class TopicosController {
 	
-	@RequestMapping()
+	@RequestMapping("/topicos")
+	@ResponseBody
 	public List<Topico> Lista() {
 		
 		Topico topico = new Topico("Dúvida" , "Dúvida com Spring", new Curso("Spring", "Programação"));
